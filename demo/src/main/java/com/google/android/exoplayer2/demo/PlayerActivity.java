@@ -141,6 +141,22 @@ public class PlayerActivity extends Activity implements OnClickListener, ExoPlay
     simpleExoPlayerView = (SimpleExoPlayerView) findViewById(R.id.player_view);
     simpleExoPlayerView.setControllerVisibilityListener(this);
     simpleExoPlayerView.requestFocus();
+
+    initSpeedChangeButton(R.id.speed05, 0.5f);
+    initSpeedChangeButton(R.id.speed10, 1.0f);
+    initSpeedChangeButton(R.id.speed15, 1.5f);
+    initSpeedChangeButton(R.id.speed20, 2.0f);
+  }
+
+  private void initSpeedChangeButton(int id, final float speed) {
+    findViewById(id).setOnClickListener(new OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        if (player != null) {
+          player.setPlaybackParameters(new PlaybackParameters(speed, 1f));
+        }
+      }
+    });
   }
 
   @Override

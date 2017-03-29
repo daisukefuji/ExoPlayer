@@ -52,6 +52,32 @@
 
     </LinearLayout>
 
+    <LinearLayout android:id="@+id/speeds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+      <Button android:id="@+id/speed05"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="0.5x" />
+
+      <Button android:id="@+id/speed10"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="1.0x" />
+
+      <Button android:id="@+id/speed15"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="1.5x" />
+
+      <Button android:id="@+id/speed20"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="2.0x" />
+    </LinearLayout>
+
   </LinearLayout>
 
 </FrameLayout>
